@@ -169,12 +169,11 @@ export default {
           this.loading = false
         })
       },
-      //获取热门课程信息
+      //获取热门课程信息(无关痛痒的修改)
       getHotClassMsg() {
         this.loading = true
         this.$rq.get('/api/shop/hotClass')
             .then(res => {
-              
                 this.classHotMsg = res.data
                 // console.log(this.classHotMsg)
                 this.classHotMsg.forEach(element => {
